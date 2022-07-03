@@ -11,7 +11,8 @@ def dfs(sx, sy, px, py):
     used[px][py] = True
     ret = -10000
     for i in range(4):
-        nx = px + dx[i]; ny = py + dy[i]
+        nx = px + dx[i]
+        ny = py + dy[i]
         if nx < 0 or ny < 0 or nx >= H or ny >= W or c[nx][ny] == '#':
             continue
         if (sx != nx or sy != ny) and used[nx][ny] == True:

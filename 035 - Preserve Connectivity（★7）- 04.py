@@ -38,9 +38,7 @@ for _ in range(N-1):
     b -= 1
     G[a].append(b)
     G[b].append(a)
-bits = 0
-while (1 << bits) < N:
-    bits += 1
+bits = N.bit_length()
 par = [[0] * N for _ in range(bits)]
 depth = [0] * N
 id = [0] * N
